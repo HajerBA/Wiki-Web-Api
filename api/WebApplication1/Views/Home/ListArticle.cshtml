@@ -1,0 +1,54 @@
+﻿@model IEnumerable<WebApplication1.Models.Article>
+
+@{
+    ViewBag.Title = "Liste article";
+}
+
+<h2>Liste des articles récents</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(p => p.Theme)
+        </th>
+        <th>
+            @Html.DisplayNameFor(p => p.Auteur)
+        </th>
+        <th>
+            @Html.DisplayNameFor(p => p.DateCreate)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(p => p.Image)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(p => p.Contenu)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.Theme
+
+            </td>
+            <td>
+                @item.Auteur
+            </td>
+            <td>
+                @item.DateCreate
+            </td>
+            @*<td>
+                @item.Image
+            </td>*@
+            <td>
+                @item.Contenu
+            </td>
+
+        </tr>
+    }
+
+</table>
+
